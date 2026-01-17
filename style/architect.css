@@ -1,9 +1,181 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    overflow-x: hidden;
+    font-family: "Work Sans", sans-serif;
+}
 
-.work-sans-font {
-  font-family: "Work Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+/* header section color */
+.header-color {
+    background-color: antiquewhite;
+}
+
+/*  nav and hero section container */
+.header-container {
+    max-width: 1440px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 30px 20px 0;
+}
+
+/* navbar text logo and items link display flex  */
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* navbar text-Logo adjust */
+.logo {
+    color: #131313;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* navbar list display flex and list style none or item gap 30px */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+/* navbar links item underline none and text adjust */
+.text {
+    text-decoration: none;
+    font-size: 18px;
+    color: #424242;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+/* navbar links item hover effect */
+.text:hover {
+    color: orange;
+}
+
+/* mobile responsive 3line icon  */
+.check-btn,
+.hamburger-icon {
+    display: none;
+}
+
+.hamburger-icon span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: #131313;
+    margin: 5px 0;
+    border-radius: 2px;
+}
+
+/* hero content h1 and p center */
+.banner-section {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.hero-h1-p {
+    max-width: 862px;
+    margin: 0 auto;
+}
+
+/* hero top content h1 and p adjust  */
+.hero-tittle {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* hero p description  */
+.hero-description {
+    font-size: 1rem;
+    color: #727272;
+    line-height: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* hero button  */
+.primary-btn {
+    background-color: #FF900E;
+    color: #FFFFFF;
+    padding: 16px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* hero button hover effect  */
+.primary-btn:hover {
+    background-color: orangered;
+    transform: scale(1.05);
+}
+
+/* hero section banner image adjust  */
+.hero-banner {
+    width: 100%;
+    margin: 50px 0;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* All device friendly responsive code  */
+/* mobile responsive  */
+@media screen and (max-width: 576px) {
+    .logo {
+        font-size: 1.8rem;
+    }
+
+    /* mobile responsive hamburger icon  */
+    .hamburger-icon {
+        display: block;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    .nav-links {
+        position: absolute;
+        flex-direction: column;
+        top: 70px;
+        right: -100%;
+        width: 35%;
+        height: auto;
+        transition: 0.5s ease-in-out;
+        z-index: 1000;
+        align-items: center;
+        padding: 20px;
+        gap: 20px;
+        background-color: #FFFFFF;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+    }
+
+    #check:checked~.nav-links {
+        right: 0;
+    }
+
+    /* humburger icon item font size adjust  */
+    .text {
+        font-weight: 500;
+        color: black;
+    }
+
+    /*  navbar to hero section content margin  */
+    .banner-section {
+        margin-top: 3rem;
+    }
+
+    /* banner adjust for mobile device  */
+    .hero-banner {
+        margin: 1rem 0;
+    }
+
+    /* button margin bottom  */
+    .hero-description {
+        margin-bottom: 1rem;
+    }
 }
